@@ -6,7 +6,7 @@ import { PageHeader } from "@/components/ui/page-header/PageHeader";
 import { Grid, Label } from "@/components/ui";
 import { MultiSelect, MultiSelectOption } from "@/dev/multi-select/MultiSelect";
 import { useForm } from "react-hook-form";
-import { SelectedItemsPanel } from "@/components/ui/selected-items-panel/SelectedItemsPanel";
+import { SelectedItemsSummary } from "@/components/ui/selected-items-summary/SelectedItemsSummary";
 
 type FormValues = {
   roles: number[];
@@ -204,7 +204,7 @@ function CreateSystemGroupRole() {
                 selectAllLabel="Select All Services"
               />
               <div className="pt-10">
-                <SelectedItemsPanel
+                <SelectedItemsSummary
                   title={
                     <>
                       Selected Services:{" "}
@@ -237,7 +237,7 @@ function CreateSystemGroupRole() {
 
               {hasPayer ? (
                 <div className="pt-10">
-                  <SelectedItemsPanel
+                  <SelectedItemsSummary
                     title={
                       <>
                         Selected Payer Groups:{" "}

@@ -9,7 +9,7 @@ export type SelectedItem = {
   label: React.ReactNode;
 };
 
-type SelectedItemsPanelProps = Readonly<{
+type SelectedItemsSummaryProps = Readonly<{
   title: React.ReactNode;
   items?: SelectedItem[];
   onRemove: (id: string | number) => void;
@@ -17,13 +17,13 @@ type SelectedItemsPanelProps = Readonly<{
   className?: string;
 }>;
 
-export function SelectedItemsPanel({
+export function SelectedItemsSummary({
   title,
   items,
   onRemove,
   onClearAll,
   className,
-}: SelectedItemsPanelProps) {
+}: SelectedItemsSummaryProps) {
   if (!items?.length) return null;
 
   return (

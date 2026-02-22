@@ -1,4 +1,4 @@
-export { RoleMultiSelect, type RoleMultiSelectProps } from "./RoleMultiSelect";
+export { MultiSelectOptions } from "./MultiSelectOptions";
 export { defaultGetKey } from "./utils/helper";
 export type { MultiSelectOption, MultiSelectProps } from "./types";
 export { MultiSelect } from "./MultiSelect";

@@ -1,11 +1,5 @@
-"use client";
-
+import { Control, FieldValues, Path } from "react-hook-form";
 import * as React from "react";
-import {
-  Control,
-  FieldValues,
-  Path,
-} from "react-hook-form";
 
 export type MultiSelectOption<T = unknown> = {
   value: T;

@@ -3,8 +3,7 @@
 import * as React from "react";
 import { Button } from "@/components/ui/button/Button";
 import { PageHeader } from "@/components/ui/page-header/PageHeader";
-import { Grid, Label } from "@/components/ui";
-import { MultiSelect, MultiSelectOption } from "@/dev/multi-select/MultiSelect";
+import { MultiSelect, MultiSelectOption, MultiSelectOptions } from "@/dev/multi-select";
 import { useForm } from "react-hook-form";
 import { SelectedItemsSummary } from "@/components/ui/selected-items-summary/SelectedItemsSummary";
 
@@ -161,7 +160,7 @@ function CreateSystemGroupRole() {
         <div className="grid grid-cols-2 gap-8 items-start">
           {!hasService && (
             <>
-              <MultiSelect
+              <MultiSelectOptions
                 control={control}
                 name="services"
                 label="Service"
@@ -174,7 +173,7 @@ function CreateSystemGroupRole() {
                 selectAllLabel="Select All Services"
               />
 
-              <MultiSelect
+              <MultiSelectOptions
                 control={control}
                 name="payerGroups"
                 label="Payer Control Group"
@@ -191,7 +190,7 @@ function CreateSystemGroupRole() {
 
           {hasService && (
             <>
-              <MultiSelect
+              <MultiSelectOptions
                 control={control}
                 name="services"
                 label="Service"
@@ -222,7 +221,7 @@ function CreateSystemGroupRole() {
                 />
               </div>
 
-              <MultiSelect
+              <MultiSelectOptions
                 control={control}
                 name="payerGroups"
                 label="Payer Control Group"
